@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result</title>
+    </head>
+    <style>
+        body{
+            background-color: bisque;
+
+        }
+        .prediction{
+            padding: 0;
+            margin: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 50%;
+            justify-content: center;
+        }
+        .prediction h1{
+            color: #765af2;
+        }
+        #pred{
+            color: deeppink;
+        }
+        .content{
+            color: blue;
+            font-size: larger;
+        }
+    </style>
+    <body>
+        <div class="prediction">
+
+            <h1>Is this what you Expected</h1>
+            <h1 id="pred">Predictions</h1>
+            <div class="content">
+
+                {% for r,p in res %}   <!--passing content from backend -->
+                {{r}} : {{p}}%<br/>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

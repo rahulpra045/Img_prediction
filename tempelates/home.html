@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   
+</head>
+
+<style>
+    body{
+        background-color: blanchedalmond;
+    }
+    .container{
+            padding: 0;
+            margin: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 50%;
+            justify-content: center;
+        }
+        
+        .btn2{
+            background-color: #ec8d4075;
+
+        }
+        .btn1{
+            color: #dd8500;
+
+        }
+        .home{
+            color: #dd8500;
+        }
+</style>
+<body>
+    <div class="container">
+
+        <h1 class="home">Insert Image</h1>
+        
+        <form action="imageupload/imageprocess" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="btn1" type="file" name="image" id="image"/> 
+            <input class="btn2" type="submit" value="submit"/> 
+        </form>
+    </div>
+</body>
+
+</html>
